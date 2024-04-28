@@ -3,7 +3,7 @@ import { LayoutGroup } from 'framer-motion';
 import { useState } from 'react';
 import { Card } from '../components/Card/Card';
 import { Frames } from '../components/Frames/Frames';
-import { data, frames } from './consts';
+import { data, frames, icons } from './consts';
 
 import style from './main.module.sass';
 export const App = () => {
@@ -24,7 +24,7 @@ export const App = () => {
         <div className={style.cards}>
           <LayoutGroup> 
             {
-              data.map((el, i) => <Card {...el} key={i} isOpen={isOpen[i]} onClick={() => toggleCardNumber(i)} />)
+              data.map((el, i) => <Card {...el} key={i} isOpen={isOpen[i]} onClick={() => toggleCardNumber(i)} icon={icons[i]}/>)
             }
           </LayoutGroup>
         </div>

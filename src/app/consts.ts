@@ -2,8 +2,11 @@ import frame1 from '../assets/img/frame1.png';
 import frame2 from '../assets/img/frame2.png';
 import frame3 from '../assets/img/frame3.png';
 import frame4 from '../assets/img/frame4.png';
+import icon0 from '../assets/img/icon0.svg';
+import icon1 from '../assets/img/icon1.svg';
+import icon2 from '../assets/img/icon2.svg';
+import icon3 from '../assets/img/icon3.svg';
 import { CardProps } from "../components/Card/type";
-
 
 export const data: CardProps[] = [
     {
@@ -25,3 +28,5 @@ export const data: CardProps[] = [
 ];
 
 export const frames = [frame1, frame2, frame3, frame4];
+
+export const icons = [icon0, icon1, icon2, icon3];

@@ -12,20 +12,27 @@ export const Card = ({ title, text, icon, isOpen, onClick }: CardProps): JSX.Ele
             initial={{ borderRadius: 24 }}
             data-isOpen={isOpen}
             onClick={onClick}>
-            <motion.div layout>
-                <motion.div layout="position" className={style.title}>
-                    <img src={icon} alt="" />
-                    <h3>{title}</h3>
-                </motion.div>
+            
+            <motion.div layout className={style.content}>
+                <motion.img layout="position" src={icon} alt="" />
 
-             
-                <motion.div layout className={style.text}>
-                    {
-                        isOpen ? (
-                            <motion.p layout="position" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{duration: 0.5, delay: 0.1, ease: [0, 0.71, 0.2, 1.01]}}>{text}</motion.p>
-                        ): null
-                    }
+                <motion.div layout="position" className={style.ctx}>
+
+                    <motion.div layout="position" className={style.title}>
+                        <h3>{title}</h3>
+                    </motion.div>
+
+                
+                    <motion.div layout className={style.text}>
+                        {
+                            isOpen ? (
+                                <motion.p layout="position" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{duration: 0.5, delay: 0.1, ease: [0, 0.71, 0.2, 1.01]}}>{text}</motion.p>
+                            ): null
+                        }
+                    </motion.div>
+
                 </motion.div>
+                
 
 
             </motion.div>
