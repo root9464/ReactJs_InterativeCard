@@ -1,0 +1,29 @@
+.block
+    background-color: white
+    width: 600px
+    height: auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    -webkit-user-select: none     
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    сursor: pointer
+    padding: 16px
+    border: 2px solid #EDEFF0
+    &[data-isOpen=true]
+        height: max-content
+
+
+    .title
+        display: flex
+        flex-direction: row
+        gap: 16px
+    .text
+        display: flex
+        flex-direction: column
+        gap: 16px
+        height: max-content
+        margin-left: 35px
