@@ -1,3 +1,4 @@
+
 .block
     background-color: white
     width: 600px
@@ -11,24 +12,42 @@
     -ms-user-select: none
     user-select: none
     сursor: pointer
-    padding: 16px
+    padding: 32px
     gap: 12px
+   
+
     border: 2px solid #EDEFF0
     &[data-isOpen=true]
+        box-shadow: 0px 5px 10px 0px rgba(112, 144, 176, 16%)
         height: auto
 
 
     .content
         display: flex
-        gap: 16px
+        flex-direction: row
+        gap: 24px
         .ctx
             display: flex
             flex-direction: column
             gap: 12px
-            
+            .title 
+                > h3
+                    font-size: 24px
+                    font-weight: 700
+                    line-height: 27.84px
+                    letter-spacing: 0em
+            .text 
+                > p
+                    font-size: 16px
+                    font-weight: 400
+                    line-height: 24px
+                    letter-spacing: 0em
 
         > img
             position: relative
-            top: 5px
-            width: 20px
-            height: 20px
+            top: 2px
+            width: 24px
+            height: 24px
+            display: flex 
+            align-items: center
+            justify-content: center

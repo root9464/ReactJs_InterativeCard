@@ -16,16 +16,15 @@ export const App = () => {
   };
 
   return (
-    <>
+    <div className={style.page}>
       <h1>Решайте задачи, опираясь на данные о рынке труда</h1>
-      {cardNumber}
       <div className={style.main}>
-        
+
         <div className={style.cards}>
           <LayoutGroup> 
-            {
-              data.map((el, i) => <Card {...el} key={i} isOpen={isOpen[i]} onClick={() => toggleCardNumber(i)} icon={icons[i]}/>)
-            }
+          {
+            data.map((el, i) => <Card {...el} key={i} isOpen={isOpen[i]} onClick={() => toggleCardNumber(i)} icon={icons[i]}/>)
+          }
           </LayoutGroup>
         </div>
 
@@ -34,7 +33,8 @@ export const App = () => {
         </div>
 
       </div>
-
-    </>
+      <button>Следующая карточка</button>
+      
+    </div>
   )
 }
